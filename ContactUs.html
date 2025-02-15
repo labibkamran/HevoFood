@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+
+    <style>
+        body{
+            background-color: #fbca43;
+            align-items: center;
+            padding-top: 4%;
+            padding-left: 35%;
+            justify-content: center;
+            text-align: center;
+        }
+        div{
+            background-color: white;
+            border: 2px solid rgb(111, 57, 3);
+            box-shadow: 10px 10px  rgb(122, 64, 7);
+            height: 50%;
+            width: 43%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 5px  #f8c740;
+
+        }
+        h2{
+            color: rgb(111, 57, 3);
+        }
+        .btn{
+            width:100px;
+            background-image: -webkit-linear-gradient(top, #FCC737, #FFD95F);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 8px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            line-height: 8;
+            color: rgb(93, 48, 4);
+        }
+        .btn:hover {
+            background-color: rgb(93, 48, 4);
+            background-image: none; 
+            color: #ffffff;
+        }
+        form{
+            text-align: center;
+            line-height: 3;
+        }
+
+        input,textarea{
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid  rgb(122, 64, 7);
+            border-radius: 4px;
+            color: rgb(122, 64, 7);
+            
+        }
+       textarea{
+        height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Get in Touch with Us</h2>
+        <form>
+            <input type="text" name = "name" value = "Enter your name: " onClick="this.select();" autofocus required>
+            <br>
+            <input type="email" name = "email" value = "Enter your email address: " onClick="this.select();" required>
+            <br>
+            <input type="tel" name = "phone" value = "Enter your phone number: " onClick="this.select();">
+            <br>
+            <textarea style="width: 50%;" onClick="this.select();">Enter your message </textarea>
+            <br>
+            <a class="btn" value = "submit" href="mailto:mehreens826@gmail.com">Submit</a>
+            <br>
+        </form>
+    </div>
+</body>
+</html>
