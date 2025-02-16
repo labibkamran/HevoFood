@@ -137,8 +137,8 @@
         <div class="logo">Restaurant</div>
         <ul class="nav-links">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
         <button class="btn">🛒 Cart</button>
@@ -149,13 +149,13 @@
         <div class="contact-box">
             <h2>Get in Touch with Us</h2>
             <form>
-                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="text" name="name" placeholder="Enter your name" maxlength="25" required>
                 <br>
-                <input type="email" name="email" placeholder="Enter your email address" required>
+                <input type="email" name="email" placeholder="Enter your email address" maxlength="40" required>
                 <br>
-                <input type="tel" name="phone" placeholder="Enter your phone number">
+                <input type="tel" name="phone" placeholder="Enter your phone number" maxlength="13" required>
                 <br>
-                <textarea name="message" placeholder="Enter your message"></textarea>
+                <textarea name="message" placeholder="Enter your message" maxlength="400"></textarea>
                 <br>
                 <button class="btn">Submit</button>
             </form>

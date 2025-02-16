@@ -5,23 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Confirmation</title>
     <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar - Fixed at the Top */
+        .navbar {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-bottom: 3px solid #FF6600;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #FF6600;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 3px solid #FF6600;
+            color: #FF6600;
+        }
+
+        /* Centering Content */
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
-            background-color: #fbca43;
+            background-color: white; /* Removed colored background */
             margin: 0;
+            text-align: center;
+            padding-top: 80px; /* Adjusted for navbar */
         }
-        
+
         .container {
             background-color: white;
             height: 500px;
             width: 700px;
             border: 2px solid rgb(111, 57, 3);
             border-radius: 2%;
-            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -35,13 +89,49 @@
             height: auto;
             margin-top: 20px;
         }
+
+        .btn {
+            background-color: #FF6600;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #e65c00;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Restaurant</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        <a href="cart.html" class="btn">🛒 Cart</a>
+    </nav>
+
+    <!-- Order Confirmation Content -->
     <div class="container">
         <h1>Thank you for your order!</h1>
         <p>Please check your inbox for the confirmation message.</p>
-        <img src="ty.jpeg" alt="Thank You Image">
+        <img src="./public/ty.jpeg" alt="Thank You Image">
+        <a href="index.html" class="btn">Back to Home</a>
     </div>
+
 </body>
 </html>

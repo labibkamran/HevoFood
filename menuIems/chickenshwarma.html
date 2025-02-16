@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Item </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Navbar - Fixed at the Top */
+      .navbar {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        border-bottom: 3px solid #ff6600;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff6600;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 0 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+      }
+
+      .nav-links a:hover {
+        border-bottom: 3px solid #ff6600;
+        color: #ff6600;
+      }
+      body {
+        background-color: white;
+        text-align: center;
+        padding-top: 80px; /* Ensures content appears below navbar */
+      }
+      .btn {
+        background-color: #ffc107;
+        color: black;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #ffb300;
+      }
+      .container {
+        width: 90%; /* Increase width to cover more space */
+        max-width: 1100px; /* Allow it to expand */
+        height: 60vh; /* Adjust height to take more vertical space */
+
+        display: flex;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+        /* Centering the container */
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+      }
+
+      .details-section {
+        flex: 1;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      .size-options,
+      .addons {
+        margin-bottom: 20px;
+        align-items: left;
+      }
+      .size-options label,
+      .addons label {
+        display: flex;
+        align-items: center;
+        margin: 15px;
+      }
+      .addons input[type="checkbox"] {
+        display: flex;
+      }
+      .submit-btn {
+        padding: 10px 15px;
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .submit-btn:hover {
+        background-color: #e65c00;
+      }
+      img {
+        width: 90%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      /* Styles for the expandable add-ons section */
+      details.addons {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      details.addons summary {
+        background-color: #f0f0f0;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+      }
+
+      details.addons summary:after {
+        content: "\25BC"; /* Downward arrow */
+        font-size: 12px;
+        color: #777;
+        margin-left: 5px;
+      }
+
+      details.addons[open] summary:after {
+        content: "\25B2"; /* Upward arrow */
+      }
+
+      .addon-options {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-top: none;
+      }
+
+      .addon-options label {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Creates space between the checkbox and text */
+        margin-bottom: 5px;
+      }
+
+      .addon-options input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Restaurant</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../menu.html">Menu</a></li>
+        <li><a href="../menu.html">About Us</a></li>
+        <li><a href="../ContactUs.html">Contact Us</a></li>
+      </ul>
+      <button class="btn">🛒 Cart</button>
+    </nav>
+
+    <div class="container">
+      <div>
+        <img src="../public/chickenshwarma.png" alt="Shwarma" />
+      </div>
+      <div class="details-section">
+        <h1><strong>Chicken Shawarma</strong></h1>
+        <form action="./item.html" method="post">
+          <div class="size-options">
+            <p><strong>Select Size:</strong></p>
+            <label
+              ><input type="radio" name="size" value="small" required />
+              Small</label
+            >
+            <label
+              ><input type="radio" name="size" value="medium" /> Medium</label
+            >
+            <label
+              ><input type="radio" name="size" value="large" /> Large</label
+            >
+          </div>
+          <!-- Add-ons Section -->
+          <details class="addons">
+            <summary>Add-ons:</summary>
+            <div class="addon-options">
+              <label
+                ><input type="checkbox" name="addons" value="extra_cheese" />
+                Extra Cheese</label
+              >
+              <label
+                ><input type="checkbox" name="addons" value="bacon" />
+                Bacon</label
+              >
+              <label
+                ><input type="checkbox" name="addons" value="mushrooms" />
+                Mushrooms</label
+              >
+              <label
+                ><input type="checkbox" name="addons" value="peppers" />
+                Peppers</label
+              >
+              <!-- Add more add-ons as needed -->
+            </div>
+          </details>
+
+          <a href="../checkout.html" class="btn">Add to Cart</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
