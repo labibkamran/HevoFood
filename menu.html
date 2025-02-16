@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Item</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fbca43;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 30px; 
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            border: 2px solid rgb(111, 57, 3);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .menu-details {
+            margin-left: 20px;
+            text-align: left;
+            flex-basis: 400px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <img src="chstk.webp" height="450" width="430">
+        </div>
+
+        <div class="menu-details">
+            <h1>Cheesy Sticks</h1>
+            <p>Delicious, oven-baked cheesy sticks served with marinara sauce.</p>
+            <p><strong>Price:</strong> 630 Rupees Only</p>
+            <a class = "button" value = "Order Now" href="Thankyou.html" target="_blank"> Order Now</a>
+        </div>
+    </div>
+
+</body>
+</html>
