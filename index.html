@@ -3,10 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
+    <title>Basic Restaurant Menu</title>
+    <style>
+       /* Basic Reset */
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar - Fixed at the Top */
+    .navbar {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        border-bottom: 3px solid #FF6600;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #FF6600;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    .nav-links a:hover {
+        border-bottom: 3px solid #FF6600;
+        color: #FF6600;
+    }
+
+    /* Body Layout */
+    body {
+        background-color: white;
+        text-align: center;
+        padding-top: 100px; /* Ensures content appears below navbar */
+    }
+    .btn {
+        background-color: #FFC107;
+        color: black;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #FFB300;
+    }
+
+       
+    </style>
 </head>
 <body>
-    <h1>This project is for out Web technologies assignment</h1>
-    <a href="ContactUs.html">Contact Us</a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Cheezius</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="./ContactUs.html">Contact Us</a></li>
+        </ul>
+        <button class="btn">🛒 Cart</button>
+    </nav>
+
 </body>
 </html>
